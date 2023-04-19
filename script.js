@@ -1,8 +1,13 @@
-//your JS code here. If required.
-let colorSelect = document.querySelector('#colorSelect');
-let removeButton = document.querySelector('#remove-item');
+var dropdownList = document.getElementById("colorSelect");
 
-removeButton.addEventListener('click', function() {
-    let selectedOption = colorSelect.options[colorSelect.selectedIndex];
-    colorSelect.removeChild(selectedOption);
+// Get the button element
+var removeButton = document.querySelector("input[type='button'][value='Select and Remove']");
+
+// Add an event listener to the button element
+removeButton.addEventListener("click", function() {
+    // Get the selected option element
+    var selectedOption = dropdownList.options[dropdownList.selectedIndex];
+  
+    // Remove the selected option element from the dropdown list
+    dropdownList.removeChild(selectedOption);
 });
